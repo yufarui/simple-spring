@@ -1,4 +1,4 @@
-package yu.problem;
+package yu.problem1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
