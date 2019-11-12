@@ -8,6 +8,9 @@ public class BeanA {
 
     private BeanB beanB;
 
+    public BeanA() {
+    }
+
     @Autowired
     public BeanA(BeanB beanB) {
         this.beanB = beanB;
