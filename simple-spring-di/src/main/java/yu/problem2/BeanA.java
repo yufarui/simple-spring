@@ -12,8 +12,7 @@ public class BeanA {
     }
 
     // 可以 试试看将 @Autowired 放在参数上,是否会引起循环依赖
-    @Autowired
-    public BeanA(BeanB beanB) {
+    public BeanA(@Autowired BeanB beanB) {
         this.beanB = beanB;
     }
 }
