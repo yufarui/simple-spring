@@ -5,11 +5,14 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.Map;
 
 @Component
 public class Config {
     @Autowired
     private List<IBean> iBeans;
+    // 试试这个
+    // private Map<String, IBean> iBeans;
 
     @PostConstruct
     public void init() {
