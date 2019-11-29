@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>simple-spring-di</module>
+        <module>simple-spring-batch</module>
     </modules>
 
     <properties>
