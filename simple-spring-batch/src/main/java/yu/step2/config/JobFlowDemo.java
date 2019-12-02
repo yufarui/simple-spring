@@ -40,7 +40,7 @@ public class JobFlowDemo {
                 .tasklet(new Tasklet() {
                     @Override
                     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
-                        System.out.println("step 1");
+                        System.out.println("jobOperatorStep 1");
                         return RepeatStatus.FINISHED;
                     }
                 }).build();
@@ -50,7 +50,7 @@ public class JobFlowDemo {
     public Step step2() {
         return stepBuilderFactory.get("step2")
                 .tasklet((contribution,context)->{
-                    System.out.println("step 2");
+                    System.out.println("jobOperatorStep 2");
                     return RepeatStatus.FINISHED;
                 }).build();
     }
@@ -61,7 +61,7 @@ public class JobFlowDemo {
                 .tasklet(new Tasklet() {
                     @Override
                     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
-                        System.out.println("step 3");
+                        System.out.println("jobOperatorStep 3");
                         return RepeatStatus.FINISHED;
                     }
                 }).build();

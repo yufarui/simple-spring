@@ -1,11 +1,11 @@
-package yu.step1;
+package yu.step2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"yu.step1"})
-public class Application {
+@SpringBootApplication(scanBasePackages = {"yu.step2"})
+public class AppStep2 {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(AppStep2.class, args);
     }
 }

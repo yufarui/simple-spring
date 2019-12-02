@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Profile;
 
 @Profile("step3")
 @SpringBootApplication(scanBasePackages = {"yu.step3"})
-public class Application {
+public class AppStep3 {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(AppStep3.class, args);
     }
 }
