@@ -47,6 +47,6 @@ public class JobOperatorConfig {
     @Scheduled(fixedDelay = 5000)
     public void scheduler() throws Exception {
         // JOB_INSTANCE_ID ：主键。作业实例ID编号，根据BATCH_JOB_SEQ自动生成
-        jobOperator().startNextInstance("jobScheduledJob");
+        // jobOperator().startNextInstance("jobScheduledJob");
     }
 }

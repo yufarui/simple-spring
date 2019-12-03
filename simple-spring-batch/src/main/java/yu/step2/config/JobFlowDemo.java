@@ -24,13 +24,22 @@ public class JobFlowDemo {
     private StepBuilderFactory stepBuilderFactory;
 
     @Bean
-    public Job JobFlowDemo1(){
+    public Job JobFlowDemo1() {
         return jobBuilderFactory.get("jobFlowDemo1")
                 .start(step1())
                 .on("COMPLETED").to(step2())
                 .from(step2()).on("COMPLETED").to(step3())
                 .from(step3())
                 .end()
+                .build();
+    }
+
+    @Bean
+    public Job JobFlowDemo2() {
+        return jobBuilderFactory.get("jobFlowDemo1")
+                .start(step1())
+                .next(step2())
+                .next(step3())
                 .build();
     }
 
@@ -49,7 +58,7 @@ public class JobFlowDemo {
     @Bean
     public Step step2() {
         return stepBuilderFactory.get("step2")
-                .tasklet((contribution,context)->{
+                .tasklet((contribution, context) -> {
                     System.out.println("jobOperatorStep 2");
                     return RepeatStatus.FINISHED;
                 }).build();

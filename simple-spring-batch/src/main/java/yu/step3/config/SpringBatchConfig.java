@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableBatchProcessing(modular = true)
+@EnableBatchProcessing
 public class SpringBatchConfig {
 
     @Value("${name}")
