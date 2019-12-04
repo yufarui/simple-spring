@@ -29,14 +29,12 @@ public class FlowDecisionConfig {
     private String name;
 
     @Bean
-    public Job flowDecisonDemoJob() {
+    public Job flowDecisonDemoJob(JobExecutionDecider myDecider) {
         System.out.println(name);
         return jobBuilderFactory.get("flowDecisonDemoJob")
                 .start(firstStep())
-                .next(myDecider())
-                .from(myDecider()).on("EVEN").to(evenStep())
-                .from(myDecider()).on("ODD").to(oddStep())
-                .from(oddStep()).on("*").to(myDecider())
+                .next(myDecider).on("EVEN").to(evenStep())
+                .from(myDecider).on("ODD").to(oddStep())
                 .end()
                 .build();
     }

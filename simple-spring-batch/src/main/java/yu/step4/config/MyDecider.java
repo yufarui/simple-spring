@@ -13,9 +13,9 @@ public class MyDecider implements JobExecutionDecider {
     public FlowExecutionStatus decide(JobExecution jobExecution, StepExecution stepExecution) {
         count++;
         System.out.println("{当前count}" + count);
-        if(count % 2 != 0) {
+        if(count % 2 == 0) {
             return new FlowExecutionStatus("EVEN");
         }
-        return new FlowExecutionStatus("OOD");
+        return new FlowExecutionStatus("ODD");
     }
 }

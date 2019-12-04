@@ -15,3 +15,7 @@ https://segmentfault.com/a/1190000016278038
 
 > 批处理框架spring batch基础知识介绍
 https://blog.csdn.net/topdeveloperr/article/details/84337956
+
+> Spring Batch(3)——Step控制
+https://cloud.tencent.com/developer/article/1459184
+`这篇文章很棒！！`
