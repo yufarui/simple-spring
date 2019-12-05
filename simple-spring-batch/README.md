@@ -19,3 +19,6 @@ https://blog.csdn.net/topdeveloperr/article/details/84337956
 > Spring Batch(3)——Step控制
 https://cloud.tencent.com/developer/article/1459184
 `这篇文章很棒！！`
+
+> Spring Batch(1)——数据批处理概念
+https://www.chkui.com/article/spring/spring_batch_introduction
