@@ -16,9 +16,17 @@ https://segmentfault.com/a/1190000016278038
 > 批处理框架spring batch基础知识介绍
 https://blog.csdn.net/topdeveloperr/article/details/84337956
 
+`文章很棒！！`
+> Spring Batch(1)——数据批处理概念
+https://cloud.tencent.com/developer/article/1456757
+
+>Spring Batch(2)——Job配置与运行
+https://cloud.tencent.com/developer/article/1459420
+
 > Spring Batch(3)——Step控制
 https://cloud.tencent.com/developer/article/1459184
-`这篇文章很棒！！`
+
+`文章很棒！！`
 
 > Spring Batch(1)——数据批处理概念
 https://www.chkui.com/article/spring/spring_batch_introduction

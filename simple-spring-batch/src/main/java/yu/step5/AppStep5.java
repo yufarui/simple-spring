@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * step 更详细 配置
+ * job,step 更详细 配置
  */
 @SpringBootApplication(scanBasePackages = {"yu.step5"})
 public class AppStep5 {

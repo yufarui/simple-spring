@@ -31,7 +31,10 @@ public class StepConfig {
                 .tasklet((stepContribution, chunkContext) -> {
                     System.out.println("step2");
                     throw new RuntimeException("step2 has exception and fail");
-                }).build();
+                })
+                // 设置重试最大限制
+                .startLimit(5)
+                .build();
     }
 
     @Bean
