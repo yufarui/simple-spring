@@ -94,7 +94,7 @@ public class JobFlowConfig {
     // job5 也可以帮助理解,可以自己写一个新的JobExecutionDecider
     @Bean
     public Job job5(JobExecutionDecider evenOddDecider) {
-        return this.jobBuilderFactory.get("job")
+        return this.jobBuilderFactory.get("job5")
                 .start(step1)
                 .next(evenOddDecider).on("FAILED").to(step2)
                 .from(evenOddDecider).on("COMPLETED").to(step3)
