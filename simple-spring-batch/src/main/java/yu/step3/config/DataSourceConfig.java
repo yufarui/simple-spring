@@ -20,27 +20,15 @@ public class DataSourceConfig {
 
     // 读取 application-step3 中配置的spring.database 开头的配置信息
     // com.zaxxer.hikari HikariDataSource 所以 配置参数 需要按此配置
+    // 配置 数据源
     @Bean
-    @Primary
     @ConfigurationProperties(prefix = "spring.database")
     public DataSource dataSource() {
         return DataSourceBuilder.create().build();
     }
 
-    // step5 后 详细展开作用
-    @Bean
-    public JobRepository jobRepository(PlatformTransactionManager platformTransactionManager) throws Exception {
-        JobRepositoryFactoryBean jobRepositoryFactoryBean = new JobRepositoryFactoryBean();
-        jobRepositoryFactoryBean.setDatabaseType(DatabaseType.MYSQL.getProductName());
-        // 配置指定的dataSource
-        jobRepositoryFactoryBean.setDataSource(dataSource());
-        jobRepositoryFactoryBean.setTransactionManager(platformTransactionManager);
-        return jobRepositoryFactoryBean.getObject();
-    }
-
     // 测试数据源配置正确
     @Bean
-    @Primary
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }

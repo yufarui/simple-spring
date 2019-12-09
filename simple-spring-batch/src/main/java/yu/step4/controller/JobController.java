@@ -3,6 +3,7 @@ package yu.step4.controller;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersBuilder;
+import org.springframework.batch.core.annotation.BeforeJob;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,4 +42,6 @@ public class JobController {
         jobLauncher.run(job, jobParameters);
         return "Job success.";
     }
+
+    @BeforeJob
 }
