@@ -8,13 +8,12 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.batch.core.job.flow.JobExecutionDecider;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
  * step2 的升级版,可控制流程(step)的作业
+ * 程序化流程的分支, 参考 jobflowConfig中job5
  */
 @Configuration
 @EnableBatchProcessing
@@ -26,16 +25,12 @@ public class FlowDecisionConfig {
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
-    @Value("${name}")
-    private String name;
-
     @Bean
-    public Job flowDecisonDemoJob(JobExecutionDecider myDecider) {
-        System.out.println(name);
+    public Job flowDecisonDemoJob(JobExecutionDecider evenOddDecider) {
         return jobBuilderFactory.get("flowDecisonDemoJob")
                 .start(firstStep())
-                .next(myDecider).on("EVEN").to(evenStep())
-                .from(myDecider).on("ODD").to(oddStep())
+                .next(evenOddDecider).on("EVEN").to(evenStep())
+                .from(evenOddDecider).on("ODD").to(oddStep())
                 .end()
                 .build();
     }
@@ -69,6 +64,6 @@ public class FlowDecisionConfig {
 
     @Bean
     public JobExecutionDecider myDecider() {
-        return new MyDecider();
+        return new EvenOddDecider();
     }
 }

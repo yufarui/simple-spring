@@ -5,7 +5,7 @@ import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.core.job.flow.FlowExecutionStatus;
 import org.springframework.batch.core.job.flow.JobExecutionDecider;
 
-public class MyDecider implements JobExecutionDecider {
+public class EvenOddDecider implements JobExecutionDecider {
 
     private int count = 0;
 

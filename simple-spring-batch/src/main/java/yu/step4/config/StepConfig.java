@@ -16,34 +16,22 @@ public class StepConfig {
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
 
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
-    @Autowired
-    private StepListener stepFailListener;
-
     @Bean
     public Step step1() {
         return stepBuilderFactory.get("step1")
                 .tasklet((stepContribution, chunkContext) -> {
                     System.out.println("step1");
                     return RepeatStatus.FINISHED;
-                })
-                .build();
+                }).build();
     }
 
-    /**
-     * 利用linstener 使步骤 ExitStatus为失败
-     *
-     * @return
-     */
     @Bean
     public Step step2() {
         return stepBuilderFactory.get("step2")
                 .tasklet((stepContribution, chunkContext) -> {
                     System.out.println("step2");
-                    return RepeatStatus.FINISHED;
-                })
-                .listener(stepFailListener)
-                .build();
+                    throw new RuntimeException("step2 has exception and fail");
+                }).build();
     }
 
     @Bean
@@ -52,7 +40,6 @@ public class StepConfig {
                 .tasklet((stepContribution, chunkContext) -> {
                     System.out.println("step3");
                     return RepeatStatus.FINISHED;
-                })
-                .build();
+                }).build();
     }
 }
