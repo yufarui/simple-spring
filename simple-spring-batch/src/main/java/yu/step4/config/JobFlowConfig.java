@@ -113,7 +113,7 @@ public class JobFlowConfig {
                 .start(step3)
                 .build();//并行流程2
 
-        return this.jobBuilderFactory.get("job")
+        return this.jobBuilderFactory.get("job6")
                 .start(flow1)
                 .split(new SimpleAsyncTaskExecutor()) //创建一个异步执行任务
                 .add(flow2)
