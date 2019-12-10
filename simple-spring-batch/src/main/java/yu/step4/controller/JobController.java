@@ -43,5 +43,4 @@ public class JobController {
         return "Job success.";
     }
 
-    @BeforeJob
 }
