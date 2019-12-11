@@ -6,11 +6,13 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
+@ConditionalOnExpression("${spring.batch.job.enabled:false}")
 @Configuration
 @EnableBatchProcessing
 public class JobParametersConfig implements StepExecutionListener {

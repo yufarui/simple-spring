@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Profile;
 
-@Profile("step3")
+@Profile("switchoff")
 @SpringBootApplication(scanBasePackages = {"yu.step3"})
 public class AppStep3 {
     public static void main(String[] args) {

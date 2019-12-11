@@ -1,18 +1,18 @@
 package yu.step5.config;
 
 import org.springframework.batch.core.configuration.annotation.DefaultBatchConfigurer;
-import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.support.transaction.ResourcelessTransactionManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-/*
+/**
  * 自定义BatchConfigurer
  * JobRepository、JobLauncher、JobRegistry、PlatformTransactionManager、JobBuilderFactory以及StepBuilderFactory
+ *
+ * 若希望观察内存处理方式 可以观察
+ * @see org.springframework.batch.core.repository.dao.MapJobInstanceDao 等系列类中属性
  */
 public class NonDataSourceBatchConfig extends DefaultBatchConfigurer {
 

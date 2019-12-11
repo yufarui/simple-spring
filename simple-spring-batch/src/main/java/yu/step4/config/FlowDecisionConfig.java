@@ -8,6 +8,7 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.batch.core.job.flow.JobExecutionDecider;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
  * step2 的升级版,可控制流程(step)的作业
  * 程序化流程的分支, 参考 jobflowConfig中job5
  */
+@ConditionalOnExpression("${spring.batch.job.enabled:false}")
 @Configuration
 @EnableBatchProcessing
 public class FlowDecisionConfig {
