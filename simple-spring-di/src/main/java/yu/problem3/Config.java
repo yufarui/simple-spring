@@ -10,12 +10,14 @@ import java.util.Map;
 @Component
 public class Config {
     @Autowired
-    private List<IBean> iBeans;
+    private Map<String, IBean> iBeans;
     // 试试这个
-    // private Map<String, IBean> iBeans;
+    // private List<IBean> iBeans;
 
     @PostConstruct
     public void init() {
+        // debug 时会发现 ABCBean 的beanName 就是 ABCBean
+        // 而其他 则是 beanA,beanB
         System.out.println(iBeans.size());
     }
 }
