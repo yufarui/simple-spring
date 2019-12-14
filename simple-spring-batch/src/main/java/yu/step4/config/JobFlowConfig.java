@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
-@ConditionalOnExpression("${spring.batch.job.enabled:false}")
+@ConditionalOnExpression("${spring.batch.job.enabled}.equals(false)")
 @Configuration
 @EnableBatchProcessing
 public class JobFlowConfig {

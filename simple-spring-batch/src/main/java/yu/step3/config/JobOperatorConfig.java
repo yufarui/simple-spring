@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
-@ConditionalOnExpression("${spring.batch.job.enabled:false}")
+@ConditionalOnExpression("${spring.batch.job.enabled}.equals(false)")
 @Configuration
 @EnableBatchProcessing
 @EnableScheduling

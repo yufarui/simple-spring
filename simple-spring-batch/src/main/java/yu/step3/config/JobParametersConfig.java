@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
-@ConditionalOnExpression("${spring.batch.job.enabled:false}")
+@ConditionalOnExpression("${spring.batch.job.enabled}.equals(false)")
 @Configuration
 @EnableBatchProcessing
 public class JobParametersConfig implements StepExecutionListener {

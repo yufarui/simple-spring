@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 
-@ConditionalOnExpression("${spring.batch.job.enabled:true}")
 @SpringBootApplication(scanBasePackages = {"yu.step2"})
 public class AppStep2 {
     public static void main(String[] args) {

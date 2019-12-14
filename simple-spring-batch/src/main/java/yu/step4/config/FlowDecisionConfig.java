@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  * step2 的升级版,可控制流程(step)的作业
  * 程序化流程的分支, 参考 jobflowConfig中job5
  */
-@ConditionalOnExpression("${spring.batch.job.enabled:false}")
+@ConditionalOnExpression("${spring.batch.job.enabled}.equals(false)")
 @Configuration
 @EnableBatchProcessing
 public class FlowDecisionConfig {
