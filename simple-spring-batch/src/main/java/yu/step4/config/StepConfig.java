@@ -1,7 +1,6 @@
 package yu.step4.config;
 
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.StepListener;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.repeat.RepeatStatus;
@@ -32,6 +31,8 @@ public class StepConfig {
                     System.out.println("step2");
                     throw new RuntimeException("step2 has exception and fail");
                 })
+                // 允许step完成后重试
+                .allowStartIfComplete(true)
                 // 设置重试最大限制
                 .startLimit(5)
                 .build();
