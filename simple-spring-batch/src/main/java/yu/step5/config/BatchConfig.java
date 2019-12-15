@@ -18,7 +18,7 @@ public class BatchConfig {
      * @return
      */
     @Bean
-    @ConditionalOnExpression("${spring.batch.job.enabled:true}")
+    @ConditionalOnExpression("${spring.batch.job.enabled}.equals(true)")
     public BatchConfigurer noSourceBatchConfigurer() {
         return new NonDataSourceBatchConfig();
     }

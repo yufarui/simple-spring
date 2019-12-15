@@ -31,4 +31,15 @@ public class NonDataSourceBatchConfig extends DefaultBatchConfigurer {
     public PlatformTransactionManager getTransactionManager() {
         return new ResourcelessTransactionManager();
     }
+
+//    @Autowired
+//    private DataSource hikariDataSource;
+//
+//    protected JobRepository createJobRepository() throws Exception {
+//        JobRepositoryFactoryBean factory = new JobRepositoryFactoryBean();
+//        factory.setDataSource(hikariDataSource);
+//        factory.setTransactionManager(super.getTransactionManager());
+//        factory.setIsolationLevelForCreate("ISOLATION_REPEATABLE_READ");
+//        return factory.getObject();
+//    }
 }

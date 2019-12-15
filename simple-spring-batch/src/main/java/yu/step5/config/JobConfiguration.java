@@ -31,6 +31,7 @@ public class JobConfiguration {
         System.out.println(name);
         return jobBuilderFactory.get("helloWorldJob")
                 .start(step1())
+                .listener(new SimleJobListener())
                 .build();
     }
 
