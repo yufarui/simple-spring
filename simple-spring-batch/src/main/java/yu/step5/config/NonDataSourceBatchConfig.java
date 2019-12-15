@@ -33,11 +33,11 @@ public class NonDataSourceBatchConfig extends DefaultBatchConfigurer {
     }
 
 //    @Autowired
-//    private DataSource hikariDataSource;
+//    private DataSource dataSource;
 //
 //    protected JobRepository createJobRepository() throws Exception {
 //        JobRepositoryFactoryBean factory = new JobRepositoryFactoryBean();
-//        factory.setDataSource(hikariDataSource);
+//        factory.setDataSource(dataSource);
 //        factory.setTransactionManager(super.getTransactionManager());
 //        factory.setIsolationLevelForCreate("ISOLATION_REPEATABLE_READ");
 //        return factory.getObject();
