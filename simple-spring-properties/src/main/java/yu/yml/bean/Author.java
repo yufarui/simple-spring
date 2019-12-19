@@ -1,13 +1,13 @@
-package yu.properties.bean;
+package yu.yml.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import yu.yml.config.MixPropertySourceFactory;
 
-
-@PropertySource("classpath:sources/author.properties")
-@ConfigurationProperties(prefix = "author")
-@Component
+@PropertySource(value = "classpath:sources/author.yml", factory = MixPropertySourceFactory.class)
+@ConfigurationProperties(prefix = "yml.author")
+@Component("ymlAuthor")
 public class Author {
     private String name;
     private String sex;

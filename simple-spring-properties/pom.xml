@@ -29,6 +29,14 @@
                     <include>**/*.properties</include>
                 </includes>
             </resource>
+
+            <resource>
+                <directory>${project.basedir}/src/main/java/yu/yml</directory>
+                <targetPath>${project.build.outputDirectory}</targetPath>
+                <includes>
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
         </resources>
     </build>
 
