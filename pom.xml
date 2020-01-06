@@ -12,6 +12,7 @@
         <module>simple-spring-di</module>
         <module>simple-spring-batch</module>
         <module>simple-spring-properties</module>
+        <module>simple-async</module>
     </modules>
 
     <properties>
