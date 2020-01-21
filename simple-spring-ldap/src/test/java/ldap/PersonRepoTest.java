@@ -16,7 +16,7 @@ public class PersonRepoTest {
     private PersonRepo personRepo;
 
     @Test
-    public void findAll() throws Exception {
+    public void findAll() {
         personRepo.findAll().forEach(person -> {
             System.out.println(person);
         });

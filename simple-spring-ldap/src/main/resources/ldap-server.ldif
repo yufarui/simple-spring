@@ -1,13 +1,13 @@
-dn: dc=didispace,dc=com
+dn: dc=space_yu,dc=com
 objectClass: top
 objectClass: domain
 
-dn: ou=people,dc=didispace,dc=com
+dn: ou=people,dc=space_yu,dc=com
 objectclass: top
 objectclass: organizationalUnit
 ou: people
 
-dn: uid=ben,ou=people,dc=didispace,dc=com
+dn: uid=ben,ou=people,dc=space_yu,dc=com
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
