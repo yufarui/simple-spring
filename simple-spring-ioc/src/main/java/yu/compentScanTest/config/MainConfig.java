@@ -6,6 +6,7 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Controller;
 
 @Configuration
+//@ComponentScan(basePackages = "yu.compentScanTest")
 //@ComponentScan(basePackages = "yu.compentScanTest", excludeFilters = {
 //        @ComponentScan.Filter(type= FilterType.ANNOTATION,value = Controller.class),
 //        @ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,value = NonUseService.class)
