@@ -1,12 +1,13 @@
 package yu.problem3;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.util.List;
 import java.util.Map;
 
+@EnableAsync
 @Component
 public class Config {
     @Autowired
