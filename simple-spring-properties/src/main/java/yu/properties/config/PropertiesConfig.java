@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import yu.properties.bean.Author;
 import yu.properties.bean.Book;
+import yu.properties.bean.NoParsedAuthor;
 
 import javax.annotation.PostConstruct;
 
@@ -23,11 +24,15 @@ public class PropertiesConfig {
     @Value("${xxx:unknow}")
     private String xxx;
 
+    @Autowired
+    private NoParsedAuthor noParsedAuthor;
+
     @PostConstruct
     public void init() {
         System.out.println(unknow);
         System.out.println(author);
         System.out.println(book);
         System.out.println(xxx);
+        System.out.println(noParsedAuthor);
     }
 }
