@@ -1,13 +1,13 @@
 package yu.factoryBean.config;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import yu.factoryBean.model.BeanA;
+
 
 @Configuration
 public class Config {
 
-	@Bean
-	public BeanAFactoryBean beanAFactoryBean() {
-		return new BeanAFactoryBean();
-	}
+	@Autowired
+	private BeanA beanAFactoryBean;
 }

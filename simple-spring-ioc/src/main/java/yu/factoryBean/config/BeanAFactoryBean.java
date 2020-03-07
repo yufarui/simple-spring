@@ -1,8 +1,10 @@
 package yu.factoryBean.config;
 
 import org.springframework.beans.factory.FactoryBean;
+import org.springframework.stereotype.Component;
 import yu.factoryBean.model.BeanA;
 
+@Component
 public class BeanAFactoryBean implements FactoryBean<BeanA> {
 
 	@Override
