@@ -1,13 +1,11 @@
-package yu.autowired.model;
+package yu.autowired.construct;
 
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@Data
-public class BeanA {
-	private String name;
+public class ConstructBeanA {
 	@Autowired
-	private BeanC beanC;
+	public ConstructBeanA() {
+	}
 }

@@ -8,18 +8,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Controller;
 import yu.compentScanTest.dao.NonUseBean;
+import yu.compentScanTest.service.NonUseService;
 
 @Configuration
 //@ComponentScan(basePackages = "yu.compentScanTest")
-//@ComponentScan(basePackages = "yu.compentScanTest", excludeFilters = {
-//        @ComponentScan.Filter(type= FilterType.ANNOTATION,value = Controller.class),
-//        @ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,value = NonUseService.class)
-//})
-@ComponentScan(basePackages = "yu.compentScanTest",
-        includeFilters = {
-                @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class),
-                @ComponentScan.Filter(type = FilterType.CUSTOM, value = CustomFilter.class),
-        }, useDefaultFilters = false)
+@ComponentScan(basePackages = "yu.compentScanTest", excludeFilters = {
+        @ComponentScan.Filter(type= FilterType.ANNOTATION,value = Controller.class),
+        @ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,value = NonUseService.class)
+})
+//@ComponentScan(basePackages = "yu.compentScanTest",
+//        includeFilters = {
+//                @ComponentScan.Filter(type = FilterType.ANNOTATION, value = Controller.class),
+//                @ComponentScan.Filter(type = FilterType.CUSTOM, value = CustomFilter.class),
+//        }, useDefaultFilters = false)
 public class MainConfig {
 
     @Autowired
