@@ -15,7 +15,7 @@
     <build>
         <resources>
             <resource>
-                <directory>${project.basedir}/src/main/java/yu/properties</directory>
+                <directory>src/main/java/yu/properties</directory>
                 <targetPath>${project.build.outputDirectory}</targetPath>
                 <includes>
                     <include>**/*.properties</include>
@@ -23,7 +23,7 @@
             </resource>
 
             <resource>
-                <directory>${project.basedir}/src/main/java/yu/yml</directory>
+                <directory>src/main/java/yu/yml</directory>
                 <targetPath>${project.build.outputDirectory}</targetPath>
                 <includes>
                     <include>**/*.yml</include>

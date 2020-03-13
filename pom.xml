@@ -14,6 +14,7 @@
         <module>simple-spring-properties</module>
         <module>simple-async</module>
         <module>simple-spring-ldap</module>
+        <module>simple-spring-trans</module>
     </modules>
 
     <properties>

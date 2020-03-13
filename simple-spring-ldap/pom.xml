@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-ldap</artifactId>
-            <version>2.2.0.RELEASE</version>
+            <version>2.2.1.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -25,11 +25,6 @@
             <artifactId>unboundid-ldapsdk</artifactId>
             <version>4.0.12</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>5.2.3.RELEASE</version>
         </dependency>
     </dependencies>
 
