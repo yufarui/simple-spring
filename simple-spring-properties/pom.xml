@@ -16,7 +16,6 @@
         <resources>
             <resource>
                 <directory>src/main/java/yu/properties</directory>
-                <targetPath>${project.build.outputDirectory}</targetPath>
                 <includes>
                     <include>**/*.properties</include>
                 </includes>
@@ -24,9 +23,15 @@
 
             <resource>
                 <directory>src/main/java/yu/yml</directory>
-                <targetPath>${project.build.outputDirectory}</targetPath>
                 <includes>
                     <include>**/*.yml</include>
+                </includes>
+            </resource>
+
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
                 </includes>
             </resource>
         </resources>
