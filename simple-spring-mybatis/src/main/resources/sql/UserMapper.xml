@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yu.dao.UserDao">
+
+    <resultMap id="typeResultMap" type="yu.model.TypeHandlerUser">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result property="createTime" jdbcType="TIMESTAMP" column="create_time"
+                typeHandler="yu.typeHandler.LongTypeHandler"/>
+    </resultMap>
+
+    <resultMap id="baseUserMap" type="yu.model.User">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+        <result property="createTime" jdbcType="TIMESTAMP" column="create_time"/>
+    </resultMap>
+
+    <select id="findTypeUserById" resultMap="typeResultMap">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="findUserList" resultType="yu.model.User">
+        select * from user where id in
+        <foreach item='item' index='index' collection='ids' open='(' separator=',' close=')'>
+            #{item}
+        </foreach>
+    </select>
+</mapper>
