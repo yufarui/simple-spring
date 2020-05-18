@@ -17,6 +17,7 @@
         <module>simple-spring-trans</module>
         <module>simple-spring-mybatis</module>
         <module>simple-spring-mvc</module>
+        <module>simple-hbase</module>
     </modules>
 
     <parent>
