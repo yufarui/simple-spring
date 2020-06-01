@@ -18,6 +18,7 @@
         <module>simple-spring-mybatis</module>
         <module>simple-spring-mvc</module>
         <module>simple-hbase</module>
+        <module>simple-log</module>
     </modules>
 
     <parent>

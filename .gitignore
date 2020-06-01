@@ -8,7 +8,6 @@
 *conf
 
 .settings/
-*log/
 *.log
 *.csv
 target/
