@@ -26,7 +26,7 @@ public class LogTest {
     }
 
     @Test
-    public void testLogFactory() {
+    public void testLoggerFactory() {
         logFactoryBean.logAlllevel();
     }
 }
