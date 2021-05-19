@@ -2,14 +2,17 @@ package yu.properties.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import yu.properties.bean.Author;
 import yu.properties.bean.Book;
 import yu.properties.bean.NoParsedAuthor;
+import yu.properties.bean.WechatQyProperties;
 
 import javax.annotation.PostConstruct;
 
 @Configuration
+@EnableConfigurationProperties(WechatQyProperties.class)
 public class PropertiesConfig {
 
     @Autowired
@@ -26,6 +29,9 @@ public class PropertiesConfig {
 
     @Autowired
     private NoParsedAuthor noParsedAuthor;
+
+    @Autowired
+    private WechatQyProperties wechatQyProperties;
 
     @PostConstruct
     public void init() {

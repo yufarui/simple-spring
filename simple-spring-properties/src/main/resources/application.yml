@@ -1,2 +1,9 @@
 app:
   name: appName
+
+ks:
+  oauth:
+    wechat-qy:
+      appId: ww8fb475e1179b029d
+      appSecret: A4ErZOCstJTeEC66NPCY-ftTPJvx_COrrEReH54QTqk
+      agentId: 1000017

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import yu.yml.bean.Author;
 
 import javax.annotation.PostConstruct;
+import java.util.List;
 
 @Configuration
 public class YmlConfig {

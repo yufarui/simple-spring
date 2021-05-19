@@ -4,3 +4,14 @@ yml:
     name: yu
     sex: male
     birth: 1992
+    nickName:
+      - yu1
+      - yu2
+      - yu3
+    test:
+      path1:
+        - 1
+        - 2
+      path2:
+        - 3
+        - 4
